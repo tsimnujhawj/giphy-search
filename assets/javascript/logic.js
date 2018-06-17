@@ -20,14 +20,18 @@ $.ajax({
     for (var i = 0; i < image.length; i++) {
             var img = document.createElement("img");
             img.className = "render";
-            img.src = image[i].images.original_still.url;
+            var animate_image = image[i].images.original.url;
+            var still_image = image[i].images.original_still.url;
+            img.src = still_image;
             img.attributes = "still" + i;
             document.getElementById("display").appendChild(img);
                 if (typeof window.addEventListener === "function") {
                 img.addEventListener("click", function(){
                 console.log(this)
                 console.log(img.src)
-                
+                img.src = animate_image;
+                console.log(img.src)
+                this.appendChild(img);
                 })
         }
     }
