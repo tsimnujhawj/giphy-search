@@ -8,3 +8,7 @@
 
 #submit-btn {
 }
+
+.render {
+    border: 3px solid blue;
+}
