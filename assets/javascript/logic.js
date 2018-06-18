@@ -27,11 +27,8 @@ $.ajax({
             document.getElementById("display").appendChild(img);
                 if (typeof window.addEventListener === "function") {
                 img.addEventListener("click", function(){
-                console.log(this)
-                console.log(img.src)
-                img.src = animate_image;
-                console.log(img.src)
-                this.appendChild(img);
+                console.log(this.src)
+                this.src = animate_image;
                 })
         }
     }
