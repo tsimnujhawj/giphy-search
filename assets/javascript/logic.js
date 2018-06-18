@@ -3,8 +3,6 @@ $(document).ready(function() { // DOCUMENT READY OPENING
 var search;
 var limit = 5;
 
-// Create Elements
-
 // Submit Button
 document.getElementById("submit-btn").addEventListener("click", function(){
 search = document.getElementById("input-text").value;
@@ -27,7 +25,6 @@ $.ajax({
             document.getElementById("display").appendChild(img);
                 if (typeof window.addEventListener === "function") {
                 img.addEventListener("click", function(){
-                console.log(this.src)
                 this.src = animate_image;
                 })
         }
@@ -37,5 +34,8 @@ $.ajax({
   throw err;
 });
 })
+
+
+
 
 }); // DOCUMENT READY CLOSING
