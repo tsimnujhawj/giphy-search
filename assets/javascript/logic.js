@@ -21,7 +21,6 @@ $.ajax({
             var animate_image = image[i].images.original.url;
             var still_image = image[i].images.original_still.url;
             img.src = still_image;
-            img.attributes = "still" + i;
             document.getElementById("display").appendChild(img);
                 if (typeof window.addEventListener === "function") {
                 img.addEventListener("click", function(){
@@ -36,6 +35,20 @@ $.ajax({
 })
 
 
+// var funcs = [];
 
+// function createfunc(i) {
+//     return function() {
+//       console.log("My value: " + i);
+//     };
+// }
+
+// for (var i = 0; i < 3; i++) {
+//     funcs[i] = createfunc(i);
+// }
+
+// for (var j = 0; j < 3; j++) {
+//     funcs[j]();
+// }
 
 }); // DOCUMENT READY CLOSING
