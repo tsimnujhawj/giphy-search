@@ -1,3 +1,7 @@
+* {
+  margin: 0 auto;
+}
+
 .main-head {
     background-color: #242325;
     margin-bottom: 50px;
@@ -12,7 +16,7 @@
     }
   
     h1 {
-      width: 600px;
+
       font-size: 60px;
       border-bottom: #DC965A 3px solid;
       font-weight: bold;
