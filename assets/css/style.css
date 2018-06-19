@@ -1,14 +1,41 @@
-.menu-box {
-    border: 3px solid black;
-}
-
-.container {
-    width: 960px;
-}
-
-#submit-btn {
-}
-
-.render {
-    border: 3px solid blue;
-}
+.main-head {
+    background-color: #242325;
+    margin-bottom: 50px;
+  }
+  
+  body {
+      width: 100%;
+      text-align: center;
+      background-image: url("../images/what-the-hex-dark.png");
+    }
+  
+    h1 {
+      width: 600px;
+      font-size: 60px;
+      border-bottom: #DC965A 3px solid;
+      font-weight: bold;
+      color: #C8C8C8;
+      margin: 20px auto;
+    }
+  
+    .container {
+      width: 960px;
+    }
+  
+    .btn {
+      font-weight: bold;
+      margin: 15px;
+      background-color: #DC965A;
+      border: none;
+      color: #FFF;
+    }
+  
+    .btn:hover {
+      background-color: #BBB891;
+    }
+  
+    .gif {
+      margin: 15px;
+      border: 3px solid #242325;
+      border-radius: 5px;
+    }
