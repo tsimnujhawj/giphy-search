@@ -1,8 +1,12 @@
 $(document).ready(function() { // DOCUMENT READY OPENING
 
+
   var tags = ["javascript", "rick and morty", "code", "css", "shia motivation", "ducks", "tigers"];
-  var limit = 10;
-  
+  var limit = 15;
+
+  // Display the results amount
+  $("#amount").html("Result Amount: " + limit);
+
   // Display category buttons
     function render() {
       $("#tags").empty();
@@ -11,6 +15,22 @@ $(document).ready(function() { // DOCUMENT READY OPENING
       }
     }
   
+  // Add 5 to results
+  $(document).on("click", "#more", function(event) {
+    event.preventDefault();
+    limit += 5;
+    $("#amount").html("Result Amount: " + limit);
+    return limit;
+  });
+
+  // Subtract 5 from results
+  $(document).on("click", "#less", function(event) {
+    event.preventDefault();
+    limit -= 5;
+    $("#amount").html("Result Amount: " + limit);
+    return limit;
+  });
+
   // Submit function to add category
   $(document).on("click", "#addTag", function(event) {
     event.preventDefault();
@@ -33,7 +53,8 @@ $(document).ready(function() { // DOCUMENT READY OPENING
       for (var i = 0; i < response.data.length; i++) {
   
   // Append images to DOM
-        $("#photo").append('<img class="gif" src="' + response.data[i].images.fixed_height_still.url + '">');
+        $("#photo").append("Rating: " + response.data[i].rating);
+        $("#photo").append('<div><img class="gif" src="' + response.data[i].images.fixed_height_still.url + '">');
       }  
     });
     $("#photo").empty();
