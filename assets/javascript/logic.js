@@ -2,7 +2,7 @@ $(document).ready(function() { // DOCUMENT READY OPENING
 
 
   var tags = ["javascript", "rick and morty", "code", "css", "shia motivation", "ducks", "tigers"];
-  var limit = 15;
+  var limit = 10;
 
   // Display the results amount
   $("#amount").html("Result Amount: " + limit);
