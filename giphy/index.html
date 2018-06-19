@@ -19,16 +19,23 @@
     <script src="logic.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="row text-center guide"><h4>Click a category and see the current top 10 most popular giphy's of that category!</h4></div>
-        <div class="row text-center tag-row" id="tags"></div>
-        <div class="row text-center category-row">
-          <input type="" name="" id="category"><button class="btn btn-secondary" id="addTag">Add Category</button>
+
+    <div class="main-head">
+        <div class="row">
+            <div class="col-md-12">
+        <h1>GIPHY Search Engine</h1>
+        <div id="tags"></div>
+          <input type="text" id="category"><button class="btn" id="addTag">Add Search</button>
+          </div>
         </div>
       </div>
     
-      <div class="container">
-        <div id="photo"></div>
+      <div class="container image-display">
+        <div class="row">
+          <div class="col-md-12">
+              <div id="photo"></div>
+          </div>
+        </div>
       </div>
     
 </body>

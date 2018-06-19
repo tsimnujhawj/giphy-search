@@ -1,36 +1,41 @@
+.main-head {
+  background-color: #242325;
+  margin-bottom: 50px;
+}
+
 body {
-    background-image: url('http://www.efoza.com/postpic/2011/04/elegant-blue-wallpaper-designs_154158.jpg');
     width: 100%;
+    text-align: center;
+    background-image: url("what-the-hex-dark.png");
   }
-  button {
-    padding: 0 2%;
-    margin: 0 2%;
-  }
-  h4 {
-    font-size: 165%;
+
+  h1 {
+    width: 600px;
+    font-size: 60px;
+    border-bottom: #DC965A 3px solid;
     font-weight: bold;
-    color: white;
+    color: #C8C8C8;
+    margin: 20px auto;
   }
+
   .container {
-    background-color: rgba(0, 0, 0, 0.2);
-    max-width: 1000px;
-    width: 100%;
+    width: 960px;
   }
+
   .btn {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 125%;
     font-weight: bold;
-  } 
-  .guide {
-    padding: 3% 0 0 0;
+    margin: 15px;
+    background-color: #DC965A;
+    border: none;
+    color: #FFF;
   }
-  .tag-row {
-    padding: 3% 0 0 0;
+
+  .btn:hover {
+    background-color: #BBB891;
   }
-  .category-row {
-    padding: 3% 0 ;
-  }
-  #photo {
-    padding-bottom: 3%;
+
+  .gif {
+    margin: 15px;
+    border: 3px solid #242325;
+    border-radius: 5px;
   }

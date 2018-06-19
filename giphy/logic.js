@@ -1,65 +1,58 @@
 $(document).ready(function() { // DOCUMENT READY OPENING
 
-var tags = ["dog", "dolphin", "whale", "cat", "elephant", "otter"];
-var limit = 10;
+var tags = ["javascript", "rick and morty", "code", "css", "shia motivation", "ducks"];
+var limit = 15;
 
-// Function for displaying movie data
-  function renderButtons() {
+// Display category buttons
+  function render() {
     $("#tags").empty();
     for (var i = 0; i < tags.length; i++) {
-      $("#tags").append("<button class='tag-buttons btn btn-primary'>" + tags[i] + "</button>");
+      $("#tags").append("<button class='tag-buttons btn'>" + tags[i] + "</button>");
     }
   }
 
-// Add tags function // 
-
+// Submit function to add category
 $(document).on("click", "#addTag", function(event) {
-
   event.preventDefault();
-
   var newTag = $("#category").val().trim();
   tags.push(newTag);
-
-  $("#tags").append("<button class='tag-buttons btn btn-primary'>" + newTag + "</button>");
-
+  $("#tags").append("<button class='tag-buttons btn'>" + newTag + "</button>");
 });
 
-// Tag button function //
-
+// Tag button function
 $(document).on("click", ".tag-buttons", function(event) {
-
-  // Keeps page from reloading //
   event.preventDefault();
-
   var type = this.innerText;
-  console.log(this.innerText);
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + window.encodeURI(type) + "&limit=" + limit + "&api_key=ZqL2rZ2Z072B1Hh0MMCdToU2zWH7OqVT";
+  var url = "https://api.giphy.com/v1/gifs/search?q=" + window.encodeURI(type) + "&limit=" + limit + "&api_key=ZqL2rZ2Z072B1Hh0MMCdToU2zWH7OqVT";
 
+// AJAX call for JSON data
   $.ajax({
-    url: queryURL,
+    url: url,
     method: "GET"
   }).done(function(response) {
     for (var i = 0; i < response.data.length; i++) {
 
-      $("#photo").append('<img class="gif" src="' + response.data[i].images.original_still.url + '">');
+// Append images to DOM
+      $("#photo").append('<img class="gif" src="' + response.data[i].images.fixed_height_still.url + '">');
     }  
   });
-
   $("#photo").empty();
 
 });
-renderButtons();
+
+// Render the initial buttons
+render();
 
 
 $("body").on("click", ".gif", function() {
     var src = $(this).attr("src");
-  if($(this).hasClass('playing')){
+  if($(this).hasClass("animate")){
      //stop
      $(this).attr('src', src.replace(/\.gif/i, "_s.gif"))
-     $(this).removeClass('playing');
+     $(this).removeClass("animate");
   } else {
     //play
-    $(this).addClass('playing');
+    $(this).addClass("animate");
     $(this).attr('src', src.replace(/\_s.gif/i, ".gif"))
   }
 });
