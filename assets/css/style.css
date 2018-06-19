@@ -5,6 +5,7 @@
 .main-head {
     background-color: #242325;
     margin-bottom: 50px;
+    border-radius: 10px;
   }
   
   body {
@@ -26,6 +27,7 @@
   
     .container {
       width: 960px;
+      width: 100%;
     }
   
     .btn {
